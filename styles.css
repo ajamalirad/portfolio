@@ -33,6 +33,7 @@ h2 {
 
 h1 {
     font-size: 4rem;
+    margin-bottom: 1.5rem;
 }
 
 h2 {
@@ -46,7 +47,7 @@ p {
 /* Header Main Styles  */
 header {
         background-color: #F1F1F1;
-        padding: 100px 0;
+        padding: 160px 0;
 }
 
 nav {
@@ -72,9 +73,12 @@ li {
     z-index: -1;
     width: 60vw;
     height: 250px;
-    top: 110px;
+    top: 140px;
     border-radius: 0 150px 150px 0 ;
 }
 
 /* Projects Section Styles  */
 
+.projects {
+    display: flex;
+}

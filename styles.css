@@ -52,8 +52,9 @@ h1:focus {
 }
 
 h2, 
-h3 {
-    color: #D1D7D5;
+h3,
+input {
+    color: #C9C9C9;
 }
 
 h2 {
@@ -80,6 +81,7 @@ img {
 }
 
 a {
+    text-decoration: none;
     color:  #D1D7D5;
     transition: color .2s ease-in-out;
 }
@@ -191,7 +193,7 @@ footer {
 .footerGrid {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    gap: 40px;
+    gap: 60px;
 }
 
 footer h2 {
@@ -199,6 +201,11 @@ footer h2 {
     color: #e4a076;
     margin-bottom: 30px;
     text-transform: uppercase;
+}
+
+/* Social Styles */
+.social li {
+    margin: 20px auto;
 }
 
 /* Form Styles */
@@ -210,9 +217,18 @@ button {
     border: none;
     padding: 15px 20px;
     margin: 10px auto;
+    letter-spacing: .06rem;
 }
 button {
-    background: white;
+    background: #C9C9C9;
+    color: white;
+    transition: all .2s ease-in-out;
+}
+
+button:hover,
+button:focus {
+    background: #D1D7D5;
+    color: #3D3D3D;
 }
 
 input:focus {

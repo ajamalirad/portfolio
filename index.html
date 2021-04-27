@@ -9,68 +9,105 @@
     <title>Anahita Jamali Rad</title>
 </head>
 <body>
+    <!-- HEADER -->
     <header class="aboutSection">
             <div class="backgroundShape background"></div>
+            <!-- ABOUT  -->
             <div class="wrapper about ">
                 <h1>Hello, world!</h1>
                 <p>Hi, I'm Anahita Jamali Rad, a multi-disciplinary front-end web-developer, designer, writer, editor, and visual artist. Welcome to my web development portfolio.</p>
             </div>
             <div class="arrow">
-                <i class="fas fa-long-arrow-alt-down"></i>
+                <a href="#projects">
+                    <i class="fas fa-long-arrow-alt-down"></i>
+                </a>
             </div>
     </header>
+    <!-- MAIN -->
     <main>
-        <section class="projects">
+        <!-- PROJECTS LINKS -->
+        <section class="projects" id="projects">
+            <h2>projects</h2>
+
             <ul class="projectsList wrapper">
-                <li>
-                <div class="hoverImage"><img src="./assets/airheadApp-square.png" alt="a screenshot of app with blue background"></div>
+
+                <li class="projectOne projectLi">
+                    <div class="hoverImage">
+                        <h4>airhead</h4>
+                        <p>a meditation app</p>
+                    </div>
+                    <img src="./assets/airheadApp-square.png" alt="a screenshot of app with blue background">
                 </li>
-                <li>
-                    <div class="hoverImage"><img src="./assets/wordfinder-square.png" alt="a screenshot of app that  has a form with inputs of words you can search"></div>
+
+                <li class="projectTwo projectLi">
+                    <div class="hoverImage">
+                        <h4>wordfinder 2000</h4>
+                        <p>an alternative dictionary</p>
+                    </div>
+                    <img src="./assets/wordfinder-square.png" alt="a screenshot of app that  has a form with inputs of words you can search">
                 </li>
-                <li>
-                    <div class="hoverImage"><img src="./assets/anywhereButHere-square.png" alt="a screenshot of map app with inputs of location and what you want to find"></div>
+
+                <li class="projectThree projectLi">
+                    <div class="hoverImage">
+                        <h4>anywhere but here</h4>
+                        <p>a map app to find average spots</p>
+                    </div>
+                    <img src="./assets/anywhereButHere-square.png" alt="a screenshot of map app with inputs of location and what you want to find">
                 </li>
-                <li>
-                    <div class="hoverImage"><img src="./assets/sunset-square.png" alt="a screenshot of app with a sunset background"></div>
+
+                <li class="projectFour projectLi">
+                    <div class="hoverImage">
+                        <h4>sunset time</h4>
+                        <p>an app to find your sunset time</p>
+                    </div>
+                    <img src="./assets/sunset-square.png" alt="a screenshot of app with a sunset background">
                 </li>
+
             </ul>
+            <div class="individualProject">
+                <!-- dynamic content -->
+            </div>
         </section>
     </main>
+    <!-- FOOTER -->
     <footer>
-        <nav class="wrapper">
-            <ul>
-                <li><a href="">github</a></li>
-                <li><a href="">linkedIn</a></li>
-                <li><a href="">twitter</a></li>
-            </ul>
-        </nav>
-        <div class="contactForm wrapper">
-            <form action="submit">
-
-                <label for="name"></label>
-                <input 
-                    type="text" 
-                    id="name"
-                    placeholder="your name"
-                >
-
-                <label for="email"></label>
-                <input 
-                    type="email" 
-                    id="email"
-                    placeholder="your email"
-                >
-
-                <label for="text"></label>
-                <input 
-                    type="text" 
-                    id="message"
-                    placeholder="your message"
-                >
-                
-                </form>
+        <div class="wrapper footerGrid">
+            <!-- SOCIAL MENU -->
+            <nav class="social">
+                <h2>find me at</h2>
+                <ul>
+                    <li><a href="">github</a></li>
+                    <li><a href="">linkedIn</a></li>
+                    <li><a href="">twitter</a></li>
+                </ul>
+            </nav>
+            <!-- CONACT FORM -->
+            <div class="contactForm">
+                <h2>get in touch</h2>
+                <form action="submit">
+                    <label for="name"></label>
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="your name"
+                    >
+                    <label for="email"></label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="your email"
+                    >
+                    <label for="text"></label>
+                    <input
+                        type="text"
+                        id="message"
+                        placeholder="your message"
+                    >
+                    <button type="submit">send</button>
+                    </form>
+            </div>
         </div>
     </footer>
+    <script src="./script.js"></script>
 </body>
 </html>

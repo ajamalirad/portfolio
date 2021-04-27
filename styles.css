@@ -8,6 +8,16 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
+.visually-hidden:not(:focus):not(:active) { 
+    position: absolute !important;
+    height: 1px; 
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap; /* added line */
+  }
+
 /* Fonts 
     font-family: 'Montserrat', sans-serif;
     font-family: 'Philosopher', sans-serif;
@@ -22,7 +32,7 @@ body {
 
 .wrapper {
     width: 85%;
-    max-width: 600px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -44,26 +54,48 @@ p {
     line-height: 1.5;
 }
 
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.arrow {
+    color:  #D1D7D5;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 40px;
+    transition: color .2s ease-in-out;
+}
+.arrow:hover,
+.arrow:focus {
+    color: #e4a076;
+}
+
+li {
+    list-style: none;
+}
+
 /* Header Main Styles  */
 header {
         background-color: #F1F1F1;
-        padding: 160px 0;
+        padding: 300px 0;
+        height: 100vh;
 }
 
-nav {
-    display: flex;
-    flex-direction: row-reverse;
+header .arrow {
+    margin-top: 300px;
 }
-li {
-    list-style: none;
-    line-height: 2;
-}
+
 
 /* About Section Styles*/
 .aboutSection {
     position: relative;
     margin-bottom: 160px;
     z-index: 0;
+}
+.about {
+    max-width: 600px;
 }
 
 
@@ -73,12 +105,35 @@ li {
     z-index: -1;
     width: 60vw;
     height: 250px;
-    top: 140px;
+    top: 260px;
     border-radius: 0 150px 150px 0 ;
 }
 
 /* Projects Section Styles  */
 
-.projects {
-    display: flex;
+.projectsList {
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.projectsList img {
+    border: 1px solid #F1F1F1;
+}
+
+.projectImage {
+    width: 300px;
+    height: 300px;
+}
+
+.hoverImage:hover,
+.hoverImage:focus {
+    opacity: .5;
+}
+
+
+/* Form Styles */
+input {
+    display: block;
 }

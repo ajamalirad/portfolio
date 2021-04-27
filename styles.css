@@ -84,6 +84,7 @@ a {
     text-decoration: none;
     color:  #D1D7D5;
     transition: color .2s ease-in-out;
+    padding: 10px 0;
 }
 
 a:hover,
@@ -112,6 +113,20 @@ header .arrow {
 margin-top: 60px;
 }
 
+.blinking {
+    animation: blinkingArrow 3s linear 3;
+}
+
+@keyframes blinkingArrow {
+    0%,
+    60% {
+        color: #D1D7D5;
+    }
+    40% {
+        color: #e4a076;
+    }
+}
+
 /* About Section Styles*/
 .aboutSection {
     position: relative;
@@ -135,6 +150,7 @@ margin-top: 60px;
 /* Projects Section Styles  */
 .projects {
     padding: 80px 0;
+    font-size: .95rem;
 }
 .projectsList {
     display: grid;
@@ -153,6 +169,7 @@ margin-top: 60px;
 
 .projectLi {
     position: relative;
+    cursor: pointer;
 }
 .hoverImage {
     background: rgba(209, 215, 213, 0.9);
@@ -205,7 +222,7 @@ footer h2 {
 
 /* Social Styles */
 .social li {
-    margin: 20px auto;
+    margin: 15px auto;
 }
 
 /* Form Styles */

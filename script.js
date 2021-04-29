@@ -12,7 +12,7 @@ projectOne: {
     },
     projectTwo: {
         title: `Wordfinder 2000`,
-        url: `./assets/airheadWide.png`,
+        url: `./assets/wordfinderWide.png`,
         tools: `JS | HTML | CSS | REST APIs`,
         github: `https://github.com/Anahita-and-Aaron/wordFinder`,
         live: `https://wordfinder2000.netlify.app`,
@@ -20,7 +20,7 @@ projectOne: {
     },
     projectThree: {
         title: `Anywhere But Here`,
-        url: `./assets/airheadApp.png`,
+        url: `./assets/anywhereWide.png`,
         tools: `REACT | HTML | CSS | MapQuest API`,
         github: `https://github.com/MappleInc/anywhereButHere`,
         live: `https://quizzical-wescoff-cb58e4.netlify.app/`,
@@ -28,7 +28,7 @@ projectOne: {
     },
     projectFour: {
         title: `Sunset Time`,
-        url: `./assets/airheadApp.png`,
+        url: `./assets/sunsetWide.png`,
         tools: `JQuery | HTML | CSS`,
         github: `https://github.com/ajamalirad/sunset`,
         live: `https://sunset-tonight.netlify.app`,

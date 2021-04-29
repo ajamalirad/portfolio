@@ -70,7 +70,7 @@ portfolioApp.projectThumb.forEach( (individualLi) => {
                 <h2>${portfolioApp.projects[selectedLi].title}</h2>
                 <p><span class="toolsClass">${portfolioApp.projects[selectedLi].tools}</span></p>
                 <p>${portfolioApp.projects[selectedLi].description}<p>
-                <a href="${portfolioApp.projects[selectedLi].github}">github</a> | <a href="${portfolioApp.projects[selectedLi].live}">live</a>
+                <a href="${portfolioApp.projects[selectedLi].github}" target="_blank" rel="noopener noreferrer">github</a> | <a href="${portfolioApp.projects[selectedLi].live}" target="_blank" rel="noopener noreferrer">live</a>
             </div>
             `;
             portfolioApp.projectDiv.classList.add(`visibleProject`);

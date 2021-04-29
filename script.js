@@ -7,28 +7,32 @@ projectOne: {
         url: `./assets/airheadWide.png`,
         tools: `REACT | HTML | CSS`,
         github: `https://github.com/airheadapp/airhead`,
-        live: `https://airhead-meditation.netlify.app/`
+        live: `https://airhead-meditation.netlify.app/`,
+        description: `A meditation app that generates a random inspirational quote retrieved from Firebase while providing the user with a glowing expanding and retracting animation as a point of focus for the duration of the user’s selection.`
     },
     projectTwo: {
         title: `Wordfinder 2000`,
         url: `./assets/airheadWide.png`,
         tools: `JS | HTML | CSS | REST APIs`,
         github: `https://github.com/Anahita-and-Aaron/wordFinder`,
-        live: `https://wordfinder2000.netlify.app`
+        live: `https://wordfinder2000.netlify.app`,
+        description: `An app that allows the user to search for words and their definitions for assistance in crosswords or writing. The user can search for words with similar meaning, similar sounds, and using the first and last letters.`
     },
     projectThree: {
         title: `Anywhere But Here`,
         url: `./assets/airheadApp.png`,
         tools: `REACT | HTML | CSS | MapQuest API`,
         github: `https://github.com/MappleInc/anywhereButHere`,
-        live: `https://quizzical-wescoff-cb58e4.netlify.app/`
+        live: `https://quizzical-wescoff-cb58e4.netlify.app/`,
+        description: `An app that allows the user to search for locations in their vicinity using any word. Using the MapQuest Api, the search results show mediocre businesses and directions from your starting point.`
     },
     projectFour: {
         title: `Sunset Time`,
         url: `./assets/airheadApp.png`,
         tools: `JQuery | HTML | CSS`,
         github: `https://github.com/ajamalirad/sunset`,
-        live: `https://sunset-tonight.netlify.app`
+        live: `https://sunset-tonight.netlify.app`,
+        description: `An app using geolocation and JQuery that provides the user with sunset times for their location.`
     }
 }
 // select the project list item from the html
@@ -41,38 +45,39 @@ projectOne: {
 // on scroll, a list of tools I can use appears
 
 portfolioApp.init = () => {
-
+    projectsOnPage();
 }
 
 // declare the variables
 portfolioApp.projectThumb = document.querySelectorAll('.projectsList li');
 portfolioApp.projectDiv = document.querySelector('.individualProject');
+portfolioApp.infoDiv = document.querySelector('.infoClass');
 
-
+const projectsOnPage = () => {
 portfolioApp.projectThumb.forEach( (individualLi) => {
     individualLi.addEventListener('click', function() {
         const selectedLi = this.id;
-        console.log(this.id);
-        console.log(portfolioApp.projects);
+        portfolioApp.infoDiv.classList.add(`displayNone`);
 
-        portfolioApp.projectDiv.innerHTML = `
-        <img src=${portfolioApp.projects[selectedLi].url} alt="a screenshot of ${portfolioApp.projects[selectedLi].title}">
-        <div class="description">
-            <h2>${portfolioApp.projects[selectedLi].title}</h2>
-            <p><span class="toolsClass">${portfolioApp.projects[selectedLi].tools}</span></p>
-            <p>here is a description!<p>
-            <a href="${portfolioApp.projects[selectedLi].github}">github</a> | <a href="${portfolioApp.projects[selectedLi].live}">live</a>
-        </div>
-        `;
-
+        portfolioApp.projectDiv.classList.remove(`visibleProject`);
+        portfolioApp.projectDiv.innerHTML = ``;
+        
+        setTimeout( () => {
+            // make the innerHTML that will appear one page
+            portfolioApp.projectDiv.innerHTML = `
+            <img src=${portfolioApp.projects[selectedLi].url} alt="a screenshot of ${portfolioApp.projects[selectedLi].title}">
+            <div class="description">
+                <h2>${portfolioApp.projects[selectedLi].title}</h2>
+                <p><span class="toolsClass">${portfolioApp.projects[selectedLi].tools}</span></p>
+                <p>${portfolioApp.projects[selectedLi].description}<p>
+                <a href="${portfolioApp.projects[selectedLi].github}">github</a> | <a href="${portfolioApp.projects[selectedLi].live}">live</a>
+            </div>
+            `;
+            portfolioApp.projectDiv.classList.add(`visibleProject`);
+        }, 300)
 })
 })
-
-
-
-
-
-
+}
 
 
 

@@ -28,7 +28,8 @@ html {
 }
 body,
 input,
-button {
+button,
+textarea {
     font-family: 'Poppins', sans-serif;
     letter-spacing: .04rem;
 }
@@ -48,7 +49,6 @@ h4 {
 }
 
 h1 {
-    color: #C9C9C9;
     font-size: 4rem;
     padding-bottom: .5rem;
     margin-bottom: 1.25rem;
@@ -61,9 +61,10 @@ h1:hover,
 h1:focus {
     border-bottom: 3px solid #e4a076;
 }
-
+h1,
 h2,
-input {
+input,
+textarea {
     color: #C9C9C9;
 }
 
@@ -163,6 +164,8 @@ margin-top: 60px;
     border-radius: 0 200px 200px 0 ;
 }
 
+/* About Me Section */
+
 /* Projects Section Styles  */
 .projects {
     padding-top: 80px;
@@ -189,7 +192,7 @@ margin-top: 60px;
     cursor: pointer;
 }
 .hoverImage {
-    background: rgba(209, 215, 213, 0.9);
+    background: rgba(241, 241, 241, 0.8);
     position: absolute;
     opacity: 0;
     width: 100%;
@@ -216,14 +219,22 @@ margin-top: 60px;
 /* Individual Project Styles */ 
 .individualSection {
     margin-top: 100px;
+    padding: 100px 0;
 }
 
  .individualProject {
-    padding: 100px 0;
      display: grid;
-     grid-template-columns: 2fr 1fr;
+     grid-template-columns: 1fr 1fr;
      gap: 40px;
      color: #C9C9C9;
+     opacity: 0;
+     transform: translateY(-10%);
+     transition: all .3s ease-in-out;
+}
+
+.visibleProject {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .individualProject h2,
@@ -236,11 +247,26 @@ footer h2 {
 .individualProject a {
     font-weight: 600;
     background: #C9C9C9;
-    padding: 5px 10px;
+    padding: 10px 15px;
+    display: inline-block;
+    margin-top: 10px;
+}
+.individualProject a:hover,
+.individualProject a:focus {
+    background: #e4a076;
 }
 
 .toolsClass {
     font-weight: 800;
+}
+.infoClass {
+    font-style: italic;
+    text-align: center;
+    color: #C9C9C9;
+}
+
+.displayNone {
+    display: none;
 }
 
 /* Tools Styles */
@@ -306,13 +332,20 @@ footer h2 {
 /* Form Styles */
 
 input,
-button {
+button,
+textarea {
     display: block;
     width: 100%;
     border: none;
     padding: 15px 20px;
     margin: 10px auto;
     letter-spacing: .06rem;
+}
+
+textarea {
+    height: 150px;
+    padding: 20px;
+    resize: none;
 }
 
 .individualProject a,
@@ -322,14 +355,13 @@ button {
     transition: all .2s ease-in-out;
 }
 
-.individualProject a:hover,
-.individualProject a:focus,
 button:hover,
 button:focus {
     background: #D1D7D5;
     color: #3D3D3D;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
     outline: 2px solid #e4a076;
 }

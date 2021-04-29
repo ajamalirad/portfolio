@@ -65,8 +65,10 @@
             </ul>
         </section>
         <!-- individual projects section -->
-        
             <section class="individualSection">
+                <div class="infoClass">
+                    <p>click on a project above to see more information</p>
+                </div>
                 <div class="individualProject wrapper">
                     <!-- dynamic content -->
                 </div>
@@ -115,32 +117,41 @@
                 <h2>find me</h2>
                 <ul>
                     <li><a href="https://github.com/ajamalirad" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> github</a></li>
-                    <li><a href="https://www.linkedin.com/in/anahita-jamali-rad-460663161/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i> linkedIn</a></li>
+                    <li><a href="https://www.linkedin.com/in/anahitajamalirad" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i> linkedIn</a></li>
                     <li><a href="https://twitter.com/iknowimrite" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i> twitter</a></li>
                 </ul>
             </nav>
             <!-- CONACT FORM -->
             <div class="contactForm">
                 <h2>get in touch</h2>
-                <form action="submit">
-                    <label for="name"></label>
+                <form 
+                    action="https://formspree.io/f/xleagjbp"
+                    method="POST"
+                >
+
+                    <label for="name" class="visually-hidden">Name</label>
                     <input
+                        name="name"
                         type="text"
                         id="name"
                         placeholder="your name"
+                        required="true"
                     >
-                    <label for="email"></label>
+                    <label for="email" class="visually-hidden">Your email</label>
                     <input
+                        name="_replyto"
                         type="email"
                         id="email"
                         placeholder="your email"
+                        required="true"
                     >
-                    <label for="text"></label>
-                    <input
-                        type="text"
-                        id="message"
-                        placeholder="your message"
-                    >
+                    <label for="text"class="visually-hidden">Your message</label>
+                     <textarea 
+                        name="message" 
+                        id="message" 
+                        placeholder="Message"
+                        required="true"
+                    ></textarea>
                     <button type="submit">send</button>
                     </form>
             </div>

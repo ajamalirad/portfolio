@@ -164,13 +164,28 @@ margin-top: 60px;
     border-radius: 0 200px 200px 0 ;
 }
 
-/* About Me Section */
+/* Bio Section */
+.bioDiv,
+.individualProject {
+    padding: 60px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+.bioDiv {
+    grid-template-columns: 1fr 2fr;
+}
 
+.bioDiv h2,
+.bioDiv p {
+    text-align: left;
+    color: white;
+}
 /* Projects Section Styles  */
 .projects {
     padding-top: 80px;
-    font-size: .95rem;
     overflow: hidden;
+    font-size: .95rem;
 }
 .projectsList {
     display: grid;
@@ -192,7 +207,7 @@ margin-top: 60px;
     cursor: pointer;
 }
 .hoverImage {
-    background: rgba(241, 241, 241, 0.8);
+    background: rgba(241, 241, 241, 0.85);
     position: absolute;
     opacity: 0;
     width: 100%;
@@ -209,6 +224,13 @@ margin-top: 60px;
     opacity: 1;
 }
 
+.hoverImage:active {
+    background: #e4a076;
+}
+
+.hoverImage p {
+    font-size: .9rem;
+}
 .hoverImage p,
 .hoverImage h4 {
     text-align: center;
@@ -223,9 +245,6 @@ margin-top: 60px;
 }
 
  .individualProject {
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-     gap: 40px;
      color: #C9C9C9;
      opacity: 0;
      transform: translateY(-10%);
@@ -238,7 +257,8 @@ margin-top: 60px;
 }
 
 .individualProject h2,
-footer h2 {
+footer h2,
+.bioDiv h2 {
         margin: 0;
         text-align: left;
         text-transform: uppercase;
@@ -270,7 +290,8 @@ footer h2 {
 }
 
 /* Tools Styles */
-.tools {
+.tools,
+.bioClass {
     background: #D1D7D5;
     margin-bottom: 0;
     padding: 70px 0 20px 0;
@@ -300,6 +321,11 @@ footer h2 {
     color: #F1F1F1;
     transform: scale(120%);
     opacity: 1;
+}
+
+.tools li:active i,
+.tools li:active p {
+    color: #e4a076;
 }
 
 .tools li p {
@@ -364,4 +390,51 @@ button:focus {
 input:focus,
 textarea:focus {
     outline: 2px solid #e4a076;
+}
+
+/* Media Queries */
+
+@media (max-width: 800px) {
+    .wrapper {
+        width: 90%;
+    }
+    .bioDiv,
+    .individualProject {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 3fr;
+        gap: 40px;
+    }
+    .projectsList {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 40px;
+    }
+    .toolsGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .individualProject {
+        padding: 20px 0;
+    }
+    .bioClass,
+    .tools {
+        padding: 40px 0 5px 0;
+}
+    .toolsGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 10px;
+    }
+    .projectsList {
+        gap: 20px;
+    }
+    h2,
+    p {
+        font-size: .9rem;
+    }
 }

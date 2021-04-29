@@ -74,7 +74,7 @@ portfolioApp.projectThumb.forEach( (individualLi) => {
             </div>
             `;
             portfolioApp.projectDiv.classList.add(`visibleProject`);
-        }, 300)
+        }, 200)
 })
 })
 }

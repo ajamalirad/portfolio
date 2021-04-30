@@ -174,12 +174,12 @@ margin-top: 60px;
 /* Bio Section */
 .bioDiv,
 .individualProject {
-    padding: 60px 0;
     display: grid;
     gap: 40px;
 }
 .bioDiv {
     grid-template-columns: 1fr 2fr;
+    padding: 60px 0;
 }
 
 .bioDiv h2,
@@ -252,7 +252,7 @@ margin-top: 60px;
 
 /* Individual Project Styles */ 
 .individualSection {
-    padding: 80px 0 60px 0;
+    padding: 110px 0 80px 0;
 }
 
  .individualProject {
@@ -287,12 +287,10 @@ footer h2,
     background: #7f9c96;
 }
 
-.toolsClass {
-    font-weight: 800;
-}
 .infoClass {
     font-style: italic;
     text-align: center;
+    margin-bottom: 40px;
 }
 
 .displayNone {
@@ -300,6 +298,10 @@ footer h2,
 }
 
 /* Tools Styles */
+.toolsClass {
+    font-weight: 800;
+}
+
 .tools {
     padding: 70px 0 20px 0;
 }

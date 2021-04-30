@@ -59,6 +59,10 @@ portfolioApp.arrow = document.querySelector('.arrow');
 const appearingBio = () => {
     portfolioApp.arrow.addEventListener('click', function(){
         portfolioApp.bio.classList.add('appearingBio');
+
+        setTimeout( () => {
+            portfolioApp.bio.classList.remove('appearingBio');
+        }, 500)
     })
 }
 

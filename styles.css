@@ -199,6 +199,14 @@ margin-top: 60px;
     padding: 60px 0;
 }
 
+.bioClass a {
+    color: #3D3D3D;;
+}
+.bioClass a:hover,
+.bioClass a:focus {
+    color: #F1F1F1;
+}
+
 .bioDiv h2,
 .bioDiv p {
     text-align: left;

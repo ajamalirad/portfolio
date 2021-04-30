@@ -32,7 +32,7 @@ button,
 textarea {
     font-family: 'IBM Plex Sans', sans-serif;
     letter-spacing: .05rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .wrapper {
@@ -172,13 +172,30 @@ margin-top: 60px;
 }
 
 /* Bio Section */
+
+.appearingBio {
+    animation: appearingBio 2s linear;
+}
+
+@keyframes appearingBio {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: .5;
+    }
+    70% {
+        opacity: 1;
+    }
+}
+
 .bioDiv,
 .individualProject {
     display: grid;
     gap: 40px;
 }
 .bioDiv {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 2fr 3fr;
     padding: 60px 0;
 }
 
@@ -456,6 +473,6 @@ textarea:focus {
     input,
     button,
     textarea {
-        font-size: .9rem;
+        font-size: .95rem;
     }
 }

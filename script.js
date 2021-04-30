@@ -46,12 +46,21 @@ projectOne: {
 
 portfolioApp.init = () => {
     projectsOnPage();
+    appearingBio();
 }
 
 // declare the variables
 portfolioApp.projectThumb = document.querySelectorAll('.projectsList li');
 portfolioApp.projectDiv = document.querySelector('.individualProject');
 portfolioApp.infoDiv = document.querySelector('.infoClass');
+portfolioApp.bio = document.querySelector('.bioClass');
+portfolioApp.arrow = document.querySelector('.arrow');
+
+const appearingBio = () => {
+    portfolioApp.arrow.addEventListener('click', function(){
+        portfolioApp.bio.classList.add('appearingBio');
+    })
+}
 
 const projectsOnPage = () => {
 portfolioApp.projectThumb.forEach( (individualLi) => {

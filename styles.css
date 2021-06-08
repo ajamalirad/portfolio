@@ -25,6 +25,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 /* General Styles */
 html {
     font-size: 125%;
+    scroll-behavior: smooth;
 }
 body,
 input,

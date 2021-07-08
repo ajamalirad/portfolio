@@ -472,9 +472,9 @@ textarea:focus {
     h3 {
         font-size: 1.4rem;
     }
-    i {
-        font-size: 1.8rem;
-    }
+    /* i {
+        font-size: 1rem;
+    } */
     p,
     a,
     input,
@@ -482,4 +482,18 @@ textarea:focus {
     textarea {
         font-size: .95rem;
     }
+
+.footerGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.social ul {
+    display: flex;
+}
+
+.social li {
+    margin-left: 0;
+}
 }

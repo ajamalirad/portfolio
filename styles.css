@@ -407,6 +407,7 @@ button {
     background: #C9C9C9;
     color: white;
     transition: all .2s ease-in-out;
+    cursor: pointer;
 }
 
 button:hover,
